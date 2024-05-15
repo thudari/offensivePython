@@ -1,49 +1,51 @@
-Desenvolvendo um Script de Monitoramento Persistente
+# Developing a Persistent Monitoring Script
 
-O objetivo deste exercício é desenvolver um script em Python que simula o monitoramento de um usuário com capacidades de persistência aprimoradas. Este script irá incluir funcionalidades de captura de teclas pressionadas (keylogging), captura de telas (screenshots), monitoramento do sistema e verificação de diretórios. Além disso, o script irá criptografar todos os dados capturados antes de transmiti-los para um servidor, garantindo o armazenamento e análise segura dos dados. Este exercício é fundamental para entender como funcionam as ferramentas de monitoramento e espionagem digital e sua relevância no contexto de cibersegurança, especialmente para a detecção de ameaças e a prevenção de vazamentos de dados.
+The goal of this exercise is to develop a Python script that simulates monitoring a user with enhanced persistence capabilities. This script will include functionalities for capturing keystrokes (keylogging), taking screenshots, system monitoring, and directory checking. Moreover, the script will encrypt all captured data before transmitting it to a server, ensuring secure storage and analysis of the data. This exercise is crucial for understanding how digital monitoring and espionage tools work and their relevance in the context of cybersecurity, especially for threat detection and data leakage prevention.
 
-Parte 1: Captura Avançada e Monitoramento
+## Part 1: Advanced Capture and Monitoring
 
-Tarefa 1: Captura de Teclas e Screenshots
+### Task 1: Keystroke and Screenshot Capture
 
-Implementar um Keylogger: Vamos desenvolver um keylogger baseado em Python para capturar todas as teclas pressionadas pelo usuário e salvar esses dados em um arquivo de log. Este keylogger funcionará de forma oculta em segundo plano e será inicializado automaticamente quando o sistema for iniciado. Este exercício ajudará a compreender como as ações do usuário podem ser monitoradas sem o seu conhecimento.
+> Implement a Keylogger: Develop a Python-based keylogger to capture all keystrokes made by the user and save this data in a log file. This keylogger will operate covertly in the background and will automatically initialize when the system starts. This exercise will help understand how user actions can be monitored without their knowledge.
 
-Capturar Screenshots: Configuraremos um mecanismo para capturar e salvar periodicamente screenshots da tela do usuário em um diretório especificado. Isso é útil para entender como informações visuais podem ser coletadas para análise ou evidência sem alertar o usuário.
+> Capture Screenshots: Set up a mechanism to periodically capture and save screenshots of the user's screen in a specified directory. This is useful for understanding how visual information can be collected for analysis or evidence without alerting the user.
 
-Tarefa 2: Monitoramento da Atividade do Sistema
+### Task 2: System Activity Monitoring
 
-Coletar Informações do Sistema: Escreva uma função para coletar informações críticas do sistema, como uso de CPU, uso de memória e uma lista dos processos em execução atualmente. Isso simula a vigilância sobre o ambiente de computação do usuário, o que é vital para identificar comportamentos anômalos ou maliciosos.
+> Collect System Information: Write a function to collect critical system information, such as CPU usage, memory usage, and a list of currently running processes. This simulates surveillance over the user's computing environment, which is vital for identifying anomalous or malicious behavior.
 
-Tarefa 3: Persistência do Script
+### Task 3: Script Persistence
 
-Garantir a Continuidade do Script: Projetar o script para garantir que ele permaneça ativo e continue executando mesmo após o reinício do sistema. Isso demonstra como programas maliciosos podem se manter persistentes em um sistema infectado, uma técnica comum em malware e rootkits.
+> Ensure Script Continuity: Design the script to ensure it remains active and continues executing even after the system restarts. This demonstrates how malicious programs can maintain persistence in an infected system, a common technique in malware and rootkits.
 
-Tarefa 4: Verificação de Diretório e Criação de Arquivo ZIP
+### Task 4: Directory Checking and ZIP File Creation
 
-Verificação de Rotina: Implementar uma rotina que verifica diariamente o conteúdo do diretório TARGETDIR, comprime seu conteúdo em um arquivo ZIP e o prepara para transmissão ao servidor. Este passo é crucial para entender como dados podem ser periodicamente coletados e preparados para exfiltração.
+> Routine Check: Implement a routine that checks the contents of the TARGETDIR directory daily, compresses its content into a ZIP file, and prepares it for transmission to the server. This step is crucial for understanding how data can be periodically collected and prepared for exfiltration.
 
-Parte 2: Criptografia e Transmissão de Dados
+## Part 2: Data Encryption and Transmission
 
-Tarefa 5: Criptografia de Dados
+### Task 5: Data Encryption
 
-Criptografar Dados Capturados: Garantir que todos os dados capturados, incluindo teclas pressionadas, screenshots e arquivos ZIP, sejam criptografados antes de serem enviados ao servidor. Isso ensina a importância da criptografia para a segurança de dados durante a transmissão, protegendo informações sensíveis contra interceptação.
+> Encrypt Captured Data: Ensure that all captured data, including keystrokes, screenshots, and ZIP files, are encrypted before being sent to the server. This teaches the importance of encryption for data security during transmission, protecting sensitive information from interception.
 
-Tarefa 6: Envio de Dados Criptografados
+### Task 6: Sending Encrypted Data
 
-Configurar a Transmissão de Dados: Configurar o script para transmitir os dados criptografados de forma segura para um servidor. Aqui, você aprenderá como garantir que a transferência de dados entre o cliente e o servidor seja realizada de maneira segura, usando protocolos de comunicação seguros.
+>Configure Data Transmission: Set up the script to securely transmit the encrypted data to a server. Here, you will learn how to ensure that data transfer between the client and server is conducted securely, using safe communication protocols.
 
-Parte 3: Decodificação e Servidor de Notificação
+## Part 3: Decoding and Notification Server
 
-Tarefa 7: Servidor Python
+### Task 7: Python Server
 
-Desenvolvimento do Servidor: Desenvolver um script do lado do servidor que recebe, descriptografa e processa os dados criptografados enviados pelo script de monitoramento. Isso permite entender o processo de recepção e análise de dados em um contexto de servidor, que é essencial para operações de cibersegurança e análise forense digital.
+> Server Development: Develop a server-side script that receives, decrypts, and processes the encrypted data sent by the monitoring script. This allows understanding the process of data reception and analysis in a server context, which is essential for cybersecurity operations and digital forensic analysis.
 
-Tarefa 8: Integração com o Telegram
+### Task 8: Integration with Telegram
 
-Notificações via Bot do Telegram: Criar um bot do Telegram para receber e exibir notificações e alertas do servidor sobre os dados capturados e outros eventos significativos. Isso mostra como sistemas de alerta e notificação podem ser integrados em operações de cibersegurança para proporcionar monitoramento e resposta em tempo real.
+> Notifications via Telegram Bot: Create a Telegram bot to receive and display notifications and alerts from the server about the captured data and other significant events. This shows how alert and notification systems can be integrated into cybersecurity operations to provide real-time monitoring and response.
 
-Este exercício não apenas fortalece a compreensão técnica sobre como ferramentas de monitoramento operam mas também contextualiza a importância dessas habilidades em proteger informações e detectar atividades maliciosas. É uma excelente oportunidade para aplicar conceitos de cibersegurança em um cenário prático e realista.
+## Wrap-Up
 
-Disclaimer: Uso Educacional Apenas
+This exercise not only strengthens the technical understanding of how monitoring tools operate but also contextualizes the importance of these skills in protecting information and detecting malicious activities. It is an excellent opportunity to apply cybersecurity concepts in a practical and realistic scenario.
 
-Este material é fornecido exclusivamente para fins educacionais e de aprendizado. O objetivo é ensinar conceitos de cibersegurança, práticas de monitoramento e a importância da proteção de dados em um contexto controlado e ético.
+## Disclaimer: Educational Use Only
+
+This material is provided exclusively for educational and learning purposes. The goal is to teach cybersecurity concepts, monitoring practices, and the importance of data protection in a controlled and ethical context.
